@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>弹性盒子 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="布局的传统解决方案，基于盒装模型，依赖display属性 +position属性+float属性。 一、flex 布局 1.flex布局是什么？  flex是flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。 a.任意一个容器都可以指定为flex布局。 123.box&amp;#123;display:flex;&amp;#125; b.行内元素也可以使用flex布局123.box">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弹性盒子">
+<meta property="og:url" content="http://yoursite.com/2017/10/20/弹性盒子/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="布局的传统解决方案，基于盒装模型，依赖display属性 +position属性+float属性。 一、flex 布局 1.flex布局是什么？  flex是flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。 a.任意一个容器都可以指定为flex布局。 123.box&amp;#123;display:flex;&amp;#125; b.行内元素也可以使用flex布局123.box">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-81968ab994356565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-7a5baebe1fee9498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-8acc285842f7251f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-d2742a2f75de85d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-2029ec2431545d30.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-bfbce6e3536aaaa1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-7128c033379b06f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-b884bd20ed9a67e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-c20420989842f960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-6000d219ce8cab08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-f32901e3c5b4cbcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-a4b1c998b5b15c7d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7449514-60ca897e14c7c409.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-10-20T13:53:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="弹性盒子">
+<meta name="twitter:description" content="布局的传统解决方案，基于盒装模型，依赖display属性 +position属性+float属性。 一、flex 布局 1.flex布局是什么？  flex是flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。 a.任意一个容器都可以指定为flex布局。 123.box&amp;#123;display:flex;&amp;#125; b.行内元素也可以使用flex布局123.box">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7449514-81968ab994356565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-弹性盒子" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/20/弹性盒子/" class="article-date">
+  <time datetime="2017-10-20T13:52:33.000Z" itemprop="datePublished">2017-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      弹性盒子
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>布局的传统解决方案，基于盒装模型，依赖display属性 +position属性+float属性。</p>
+<p>一、flex 布局</p>
+<p>1.flex布局是什么？</p>
+<p> flex是flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+<p>a.任意一个容器都可以指定为flex布局。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">display:flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>b.行内元素也可以使用flex布局<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">display:inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>c.Webkit内核的浏览器，必须加上-webkit前缀。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;display：-webkit-flex;   /*safari*/</div><div class="line">         display:flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意：设为Flex布局以后，子元素的float，clear和vertical-align属性将失败。</strong></p>
+<p>二、基本概念</p>
+<p>2.采用Flex布局的元素，称为Flex容器，简称“容器”。它的所有元素自动成为 容器成员，称为Flex项目，简称“项目”。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-81968ab994356565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main  end；交叉轴的开始位置叫做cross  start ，结束位置叫做  cross end。项目默认沿主轴排列，单个项目占据的主轴空间叫做main  size，占据的交叉轴空间叫做cross  size。</p>
+<p>三、容器的属性</p>
+<p>以下六个属性设置在容器上</p>
+<ul>
+<li>flex-direction</li>
+<li>justify-content</li>
+<li>flex-wrap</li>
+<li>align-items</li>
+<li>flex-flow</li>
+<li><p>align-content</p>
+<p>3.1flex-dirction属性</p>
+</li>
+</ul>
+<p>flex-direction属性决定主轴的方向（即项目的排列方向）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">flex-direction：row  |  row-reverse  |  column  |  column-revers;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-7a5baebe1fee9498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>它可能有四个值:</p>
+<ul>
+<li>row(默认值)：主轴为水平方向，起点在左端。</li>
+<li>row-reverse:主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse:主轴为垂直方向，起点在下沿。</li>
+</ul>
+<p>3.2flex-wrap属性</p>
+<p>默认情况下，项目都排在一条线（又称“轴线”）上。flex-wrap属性定义，如果一跳轴线排不下，如果换行。<br><img src="http://upload-images.jianshu.io/upload_images/7449514-8acc285842f7251f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">flex-wrap:nowrap   | wrap  | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以 能去三个值。</p>
+<p>（1）nowrap（默认）：不换行。<br><img src="http://upload-images.jianshu.io/upload_images/7449514-d2742a2f75de85d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>(2)wrap:换行，第一行在上方<br><img src="http://upload-images.jianshu.io/upload_images/7449514-2029ec2431545d30.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>(3)wrap-reverse:换行第一行在下方。<img src="http://upload-images.jianshu.io/upload_images/7449514-bfbce6e3536aaaa1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p> 3.3flex-flow<br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">flex-flow:&lt;flex-direction&gt;  | |  &lt;flex-wrap&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 3.4justify-content属性</p>
+<p>justify-content属性定义了项目在主轴上的对齐方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">justify-content:flex-start  |  flex-end | center  |  space-between  |  space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-7128c033379b06f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>它可能取5个值，具体对齐方式与轴的方向有关。下面假设轴为从左到右。</p>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center：居中</li>
+<li>space-between:两端对齐，项目之间的间隔都相等。</li>
+<li>space-around:每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<p>3.5align-items属性</p>
+<p>align-items属性定义项目在交叉轴上如何对齐。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">align-items:flex-start  |  flex-end  | center  | baseeline  | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-b884bd20ed9a67e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<ul>
+<li>flex-start:交叉轴的起点对齐。</li>
+<li>flex-end:交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline：项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p>3.6align-content属性</p>
+<p>align-content属性定义了多跟轴线的对齐方式，如果项目只有一根轴线，该属性不起作用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">align-content:flex-start   |  flex-end   |  center   |   space-between  |  space-around   | stretch；</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-c20420989842f960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>该属性可能取6个值：</p>
+<ul>
+<li>flex-start:与交叉轴的起点对齐。</li>
+<li>flex-end:与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴的两端对齐，轴线之间的建个平均分布。</li>
+<li>space-around:每根轴线两侧的间隔都相等，所以轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+<p>四、项目的属性</p>
+<p>以下6个属性设置在项目上。</p>
+<ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex</li>
+<li>align-self<br>###4.1order属性</li>
+</ul>
+<p>order属性定义项目的排列顺序，数值越小，排列越靠前，默认为0。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">order：&lt;integer&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-6000d219ce8cab08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>4.2flex-grow属性</p>
+<p>flew-grow属性定义项目上午放大比例，默认为0，即如果曾在剩余空间，也不放大。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">flex-grow:&lt;number&gt;;  /*default 0 */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-f32901e3c5b4cbcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果所有项目的flex-grow属性都为1，则他们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其它项目都为1，则前者占据的剩余空间将比其他项多一倍。<br>4.3flex-shrink属性</p>
+<p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">flex-shrink: &lt;number&gt;;  /* default 1 */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-a4b1c998b5b15c7d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比列缩小，如果一个项目的flex-shrink属性为0，其它项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
+<p>4.4flex-basis 属性</p>
+<p>flex-basis属性定义了在分配多余空间之前，项目占据的猪轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">flex-basis:&lt;length&gt; | auto；  /*default auto*/</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>他可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<p>4.5flex属性</p>
+<p>flex属性是flex-grow,flex-shrink和flex-basisde简写，默认值为 0 1 auto.hou两个属性可选。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">flex：none   |  [&lt;&apos;flex-grow&apos;&gt;&lt;&apos;flex-shrink&apos;&gt;?  ||      &lt;&apos;flex-basis&apos;&gt;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>该属性有两个快捷值：auto（1  1  auto ）和none（0 0 auto）。建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会腿酸关值。<br>4.6align-self属性</p>
+<p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可以覆盖align-items属性，默认值为auto，表示继承腹肌元素的align-items属性，如果没有父元素，则等同于stretch。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">align-self:auto  |   flex-start  |    flex-end  |   center  |   baseline  |  stretch；</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7449514-60ca897e14c7c409.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>该属性可能取6个值，出了auto，其他都与align-items 属性完全一致。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/20/弹性盒子/" data-id="cj8zyl6s10002ngys8s7uud92" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/20/JavaScript的趣味应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          JavaScript的趣味应用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/20/JavaScript的趣味应用/">JavaScript的趣味应用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/20/弹性盒子/">弹性盒子</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/20/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
